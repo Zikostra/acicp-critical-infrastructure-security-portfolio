@@ -1,0 +1,65 @@
+TASK 5: MINI NETWORK-OPERATIONS REPORT
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+Course: ACICP201 – Network Security Engineering
+
+EXECUTIVE SUMMARY
+
+This report reviews fictional firewall events and proposes a log-backup approach for a critical infrastructure environment containing an internet edge, corporate network, DMZ, VPN zone, engineering jump zone and OT-SCADA segment. The review shows that the environment has useful visibility across access, threat, administrative and traffic events, but the value of those records depends on reliable forwarding, protected retention, synchronized time and tested restoration.
+
+The most serious events are the unauthorised Modbus request from the corporate network to the OT-SCADA zone, the outbound internet attempt from an OT workstation and the non-allowlisted RDP attempt from the jump zone to an OT engineering station. All three events were denied, which demonstrates useful preventive control, but each indicates behaviour that requires immediate investigation. The web-exploit attempt against the DMZ and the large corporate upload also require urgent review.
+
+NETWORK ZONES REVIEWED
+
+The fictional environment includes the INTERNET, CORP-LAN, DMZ-WEB, VPN-ZONE, JUMP-ZONE, ADMIN-NET, FIREWALL, SIEM and OT-SCADA zones. The internet edge controls external access. The DMZ contains public-facing services. The VPN zone provides authenticated remote access. The jump zone acts as a controlled path toward sensitive engineering systems. The administrative network supports privileged firewall access. The SIEM receives centralized events. The OT-SCADA zone contains industrial systems and therefore requires the strictest segmentation and monitoring.
+
+SUMMARY OF LOG BACKUP STATUS
+
+The proposed backup design sends traffic, threat, authentication, VPN, configuration-change, administrator-activity and system-health logs to a central SIEM or log collector. Secure forwarding should use encrypted syslog or a protected management path. Daily incremental backups, weekly full exports, monthly archive reviews and quarterly restore tests provide a practical operating schedule.
+
+The design uses thirty days of hot storage for rapid investigation, days thirty-one to ninety in warm storage and the remaining period up to one year in encrypted cold archive. At the calculated compressed rate of 2.4 GB per day, ninety days require 216 GB and a full year requires 876 GB. The estimated monthly cost of maintaining the one-year archive volume at ₦18 per GB is ₦15,768. SHA-256 hashing, role-based access, immutable storage where available, NTP verification and chain-of-custody records protect evidence integrity.
+
+TOP THREE SECURITY EVENTS
+
+The first priority is E01, where a corporate host attempted a Modbus connection to the OT-SCADA zone from a non-approved source. Modbus traffic into an industrial segment can affect controllers and process operations. Although the firewall denied the request, the source host, user and initiating process must be identified immediately. Related endpoint, DNS, authentication and network events should be preserved.
+
+The second priority is E05, an outbound HTTPS attempt from an OT workstation to an internet address. Direct OT-to-internet communication is normally inconsistent with strong industrial-network segmentation. The denial prevented the session, but the event may indicate malware, unauthorized software, misconfiguration or an attempted remote service. The workstation should be isolated or placed under enhanced monitoring while the process and destination are investigated.
+
+The third priority is E08, where the jump zone attempted RDP access to a PLC engineering station that was not on the allowlist. A jump host is trusted only when its sessions follow approved accounts, destinations and work orders. The denied event may represent operator error, a stale rule, compromised credentials or misuse of the jump host. The session owner, change ticket and endpoint activity require immediate review.
+
+Two additional events deserve high attention. E03 shows a web-exploit signature against the DMZ, with the session reset by the control. E07 shows a 950 MB upload from the corporate network to an internet destination in eight minutes. The upload may be legitimate, but it also matches a possible data-exfiltration pattern and should be checked against user activity, proxy records and data-loss-prevention alerts.
+
+OPERATIONAL IMPACT AND RISK
+
+The denied OT events show that segmentation controls are functioning, but repeated or unexplained attempts may indicate compromised hosts, incorrect access paths or weak change control. A successful industrial-protocol connection from an unauthorized source could affect availability, safety or physical operations. An OT workstation with unauthorized internet access could introduce malware or expose operational information. Misuse of a jump host could bypass the intended control boundary around engineering systems.
+
+The administrative login outside the maintenance window creates governance risk even if the account is valid. Privileged actions must be traceable to an approved reason. Log loss would increase every risk because investigators would be unable to reconstruct actions, prove policy enforcement or support regulatory and legal review.
+
+RECOMMENDED ACTIONS FOR THE NEXT 7 DAYS
+
+1. Open incident records for E01, E05 and E08 and preserve all related firewall, SIEM, endpoint, VPN, authentication and change-control evidence.
+2. Identify the users, devices and processes associated with the three critical events.
+3. Verify that the Modbus, OT internet and RDP deny rules remain active and correctly ordered.
+4. Review the DMZ server affected by E03 for patches, web logs and indicators of compromise.
+5. Validate the business purpose of the 950 MB upload in E07.
+6. Confirm the administrator identity and actions for E04.
+7. Check NTP status and log-forwarding health across all zones.
+8. Generate hashes for current exports and create chain-of-custody records.
+9. Test restoration of a representative backup sample.
+
+RECOMMENDED ACTIONS FOR THE NEXT 30 DAYS
+
+1. Implement the proposed hot, warm and cold retention model.
+2. Move supported log forwarding to encrypted transport and protect legacy forwarding through the management network.
+3. Establish immutable or write-once storage for critical evidence.
+4. Review OT allowlists, jump-host destinations and remote-access approvals.
+5. Tune SIEM alerts for unauthorized Modbus, OT-to-internet traffic, non-allowlisted engineering access, large outbound transfers and privileged access outside maintenance windows.
+6. Perform a quarterly restore test and document recovery time, missing data and hash verification.
+7. Review role-based access to the evidence repository and remove unnecessary privileges.
+8. Develop dashboards for log-source health, time drift, backup failure, archive capacity and critical OT policy violations.
+9. Exercise the legal-hold and secure-disposal procedures.
+
+CONCLUSION
+
+The fictional events demonstrate that firewall prevention must be supported by reliable evidence handling and operational follow-up. The environment successfully denied several dangerous connections, but the attempts still require investigation because they may reveal compromised systems, misuse or incorrect policy. A centralized, encrypted and hash-verified backup process with tested restoration will preserve the visibility required for security operations, incident response, compliance and management decision-making.

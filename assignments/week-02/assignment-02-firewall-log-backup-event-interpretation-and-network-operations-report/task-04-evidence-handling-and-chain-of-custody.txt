@@ -1,0 +1,44 @@
+TASK 4: EVIDENCE HANDLING AND CHAIN OF CUSTODY
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+1. COLLECTION AND EXPORT
+
+Firewall, VPN, jump-host and SIEM logs should be collected through secure centralized forwarding. When evidence is required, the authorised custodian exports the relevant date range and records the device, log type, timezone, export time, case reference and person performing the export.
+
+2. PROTECTION OF ORIGINAL LOGS
+
+Original logs should remain read-only in the source system or immutable repository. Analysts should work only with verified copies. Permissions should prevent deletion or modification by ordinary users and investigators.
+
+3. HASH GENERATION AND RECORDING
+
+A SHA-256 hash should be generated immediately after export. The hash, filename, file size, collection time, source system and collector identity should be written in the evidence register. The hash should be verified after every transfer and before analysis.
+
+4. ACCESS CONTROL
+
+Access to the evidence repository should be restricted through role-based access control and least privilege. Appropriate roles include the evidence custodian, designated incident responders, approved forensic analysts and specifically authorised legal or compliance personnel. All access should be logged.
+
+5. TIME SYNCHRONIZATION
+
+The firewalls, VPN gateway, jump hosts, SIEM and evidence systems should use approved NTP sources. The custodian should record timezone settings and verify time offset before interpreting event sequences. Significant drift should be documented.
+
+6. CHAIN OF CUSTODY
+
+Every transfer should record:
+- Case or incident reference.
+- Evidence identifier.
+- Filename and SHA-256 hash.
+- Source and destination.
+- Name and role of the person releasing the evidence.
+- Name and role of the person receiving it.
+- Date, time and purpose of transfer.
+- Verification result and signatures or electronic approval.
+
+7. TRANSFER TO OTHER TEAMS
+
+Incident response should receive verified working copies. Legal, compliance or management teams should receive only the minimum necessary evidence through encrypted, access-controlled channels. The transfer record and hash verification must accompany the files.
+
+8. RETENTION AND DISPOSAL
+
+Evidence should be retained according to policy, incident needs, legal hold and regulatory requirements. At expiry, an authorised custodian should approve secure deletion. The disposal record should identify the evidence, method, date, person responsible and approval reference. Evidence subject to legal or compliance hold must not be deleted.

@@ -1,0 +1,10 @@
+REFERENCES
+
+1. NIST SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy.
+2. NIST SP 800-82 Rev. 3, Guide to Operational Technology Security.
+3. NIST SP 800-92, Guide to Computer Security Log Management.
+4. CISA and partner guidance, Best Practices for Event Logging and Threat Detection.
+5. RFC 8446, The Transport Layer Security Protocol Version 1.3.
+6. RFC 5280, Internet X.509 Public Key Infrastructure Certificate and CRL Profile.
+7. RFC 4253, The Secure Shell Transport Layer Protocol.
+8. ACICP201 Assignment 02, Firewall Log Backup, Event Interpretation and Network Operations Report.

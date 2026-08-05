@@ -1,0 +1,15 @@
+SUBMISSION CHECKLIST
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+[x] Only the fictional event data supplied in the assignment was used.
+[x] No real logs, credentials or production firewall data were included.
+[x] All calculations and assumptions were included.
+[x] The event interpretation table was completed.
+[x] The evidence-handling and chain-of-custody process was completed.
+[x] The mini network-operations report was completed.
+[x] References were included.
+[ ] Final DOCX or PDF filename to use:
+    ACICP201_Wk2_Assignment02_Praise_Nze_C11-26-ACIS-17358
+[ ] Submit before Friday, 14 August 2026, 11:59 PM WAT.

@@ -1,0 +1,65 @@
+TASK 2: LOG STORAGE AND RETENTION CALCULATIONS
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+Given daily uncompressed volumes:
+- Edge firewall: 2.8 GB/day
+- Internal firewall: 1.6 GB/day
+- VPN gateway: 0.7 GB/day
+- DMZ firewall: 0.9 GB/day
+
+A. TOTAL DAILY LOG VOLUME
+
+2.8 + 1.6 + 0.7 + 0.9 = 6.0 GB/day
+
+Answer: 6.0 GB/day uncompressed.
+
+B. COMPRESSED DAILY STORAGE REQUIREMENT
+
+A 60% reduction means that 40% of the original volume remains.
+
+6.0 × 0.40 = 2.4 GB/day
+
+Answer: 2.4 GB/day compressed.
+
+C. COMPRESSED STORAGE FOR 90 DAYS
+
+2.4 × 90 = 216 GB
+
+Answer: 216 GB.
+
+D. COMPRESSED STORAGE FOR 365 DAYS
+
+2.4 × 365 = 876 GB
+
+Answer: 876 GB.
+
+E. MONTHLY STORAGE COST FOR THE 365-DAY ARCHIVE VOLUME
+
+876 × ₦18 = ₦15,768 per month
+
+Answer: ₦15,768 per month.
+
+F. DAILY UNCOMPRESSED VOLUME AFTER TWO QUARTERS OF 12% GROWTH
+
+Assumption: growth compounds at the end of each quarter.
+
+6.0 × 1.12 × 1.12 = 7.5264 GB/day
+
+Answer: approximately 7.53 GB/day uncompressed.
+
+G. RESTORE TIME FOR 1 TB
+
+Assumption: 1 TB = 1,000 GB for this storage calculation.
+
+1,000 ÷ 100 = 10 groups of 100 GB
+
+10 × 35 minutes = 350 minutes
+
+350 minutes = 5 hours 50 minutes
+
+Answer: approximately 5 hours 50 minutes.
+
+Alternative binary-storage assumption:
+If 1 TB is treated as 1,024 GB, the result is 358.4 minutes, or approximately 5 hours 58 minutes.

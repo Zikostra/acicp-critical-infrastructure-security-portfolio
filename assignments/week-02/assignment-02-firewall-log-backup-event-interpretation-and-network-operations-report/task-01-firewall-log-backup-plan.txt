@@ -1,0 +1,89 @@
+TASK 1: FIREWALL LOG BACKUP PLAN
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+Course: ACICP201 – Network Security Engineering
+
+1. PURPOSE
+
+The backup plan protects firewall and related network-security logs so that they remain available for security monitoring, incident response, compliance, audit, operational troubleshooting and legal review.
+
+2. LOG SOURCES
+
+- Internet edge firewall.
+- Internal segmentation firewall.
+- VPN gateway.
+- DMZ firewall.
+- Engineering jump-host firewall.
+- SIEM or central log collector.
+
+3. LOG TYPES
+
+- Traffic allow and deny logs.
+- Threat, intrusion and malware-detection logs.
+- Authentication and VPN access logs.
+- Firewall configuration-change logs.
+- Administrator activity and privileged-action logs.
+- System health, performance and availability logs.
+- VPN tunnel, session and MFA logs.
+
+4. COLLECTION AND TRANSFER METHOD
+
+All devices should forward logs securely to a central SIEM or protected log collector. Where supported, encrypted syslog over TLS should be used. Devices that cannot use encrypted forwarding should send logs through a protected management network or authenticated tunnel.
+
+The collector should write incoming events to restricted storage. Daily encrypted backups should then be created and transferred to a separate backup location. Access should be limited to authorised security, incident-response and audit personnel. Every exported file or archive should be hashed with SHA-256, and the hash should be stored separately in the evidence register.
+
+5. RETENTION POLICY
+
+Hot storage:
+- Retain the most recent 30 days in the SIEM for rapid search, alerting and incident triage.
+
+Warm storage:
+- Retain days 31 to 90 in searchable, lower-cost storage for investigations and operational reviews.
+
+Cold archive:
+- Retain the remaining period up to 365 days in encrypted archive storage with restricted access.
+
+Legal or compliance hold:
+- Suspend normal deletion for any records linked to an active incident, audit, legal matter or regulatory requirement.
+- Record who approved the hold, the affected date range, the reason and the release date.
+
+6. BACKUP SCHEDULE
+
+- Daily incremental backup of new firewall and SIEM logs.
+- Weekly full export of the protected log repository.
+- Monthly archive review to confirm retention, capacity, encryption and integrity.
+- Quarterly restore test using a representative sample.
+- Immediate additional export after a major incident or significant firewall configuration change.
+
+7. EVIDENCE PROTECTION
+
+- Generate and record SHA-256 hashes for exported files.
+- Use synchronized NTP time across firewalls, VPN gateways, jump hosts and collectors.
+- Maintain a chain-of-custody record for every evidence transfer.
+- Apply role-based access control and least privilege.
+- Encrypt backups at rest and in transit.
+- Enable immutable or write-once storage where available.
+- Monitor for deletion, modification, time drift and failed forwarding.
+- Keep original logs read-only and perform analysis on verified working copies.
+
+8. RESTORE AND FAILURE HANDLING
+
+Quarterly restore tests should confirm that archived logs can be decrypted, opened, searched and matched to their recorded hashes. Failed forwarding, missing periods, corrupted archives or hash mismatches must generate an alert and be escalated to the security operations lead.
+
+9. RESPONSIBILITIES
+
+Security operations:
+- Monitor collection, alerting and daily backup success.
+
+Firewall and network administrators:
+- Maintain forwarding configuration and time synchronization.
+
+Incident-response team:
+- Request preservation, create verified working copies and document evidence use.
+
+Compliance or legal team:
+- Approve extended retention and legal holds.
+
+Backup administrator:
+- Maintain encrypted storage, restore testing and capacity reporting.

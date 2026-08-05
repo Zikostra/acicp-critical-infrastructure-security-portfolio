@@ -1,0 +1,60 @@
+TASK 3: EVENT INTERPRETATION
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+E01
+Event type: OT protocol policy violation / unauthorised Modbus attempt.
+Likely meaning: A corporate-network host attempted TCP/502 communication with an OT-SCADA device from a non-approved source.
+Severity: Critical.
+Required response: Preserve the event, identify the source host and user, isolate the source if unexplained, review related traffic and endpoint telemetry, and confirm that the firewall deny rule worked.
+Escalation: Yes. Escalate immediately to the SOC lead, OT security owner and incident-response team.
+
+E02
+Event type: Approved remote-access session.
+Likely meaning: An engineer successfully authenticated with MFA and connected from the VPN zone to the jump zone during an approved change window.
+Severity: Low.
+Required response: Verify the change ticket and continue routine monitoring.
+Escalation: No, unless the user, source, timing or change reference does not match the approval.
+
+E03
+Event type: Web exploit attempt against a DMZ service.
+Likely meaning: An internet source triggered a web-exploit signature. The firewall or security device reset the session.
+Severity: High.
+Required response: Preserve the threat event, review web-server and WAF logs, identify the signature, check patch status, inspect for follow-on attempts and block the source if justified.
+Escalation: Yes. Escalate to the SOC and web-application owner.
+
+E04
+Event type: Privileged administrative access outside the approved window.
+Likely meaning: A successful firewall administrator login occurred outside the authorised maintenance period.
+Severity: Medium.
+Required response: Verify the administrator identity, MFA record, source device, reason for access and change-control approval. Review all actions performed during the session.
+Escalation: Yes, if no emergency approval or valid operational reason is confirmed.
+
+E05
+Event type: OT-to-internet policy violation.
+Likely meaning: An OT workstation attempted an outbound HTTPS connection to an external address. The firewall denied it.
+Severity: Critical.
+Required response: Preserve the event, isolate or closely monitor the OT workstation, determine the initiating process, review DNS and endpoint evidence, and confirm that no alternate outbound path exists.
+Escalation: Yes. Escalate immediately to OT security and incident response.
+
+E06
+Event type: Normal security-log forwarding.
+Likely meaning: A DMZ host forwarded syslog events to the SIEM over UDP/514.
+Severity: Low.
+Required response: Confirm that log flow, timestamps and event counts remain normal.
+Escalation: No, unless forwarding stops, timestamps drift or event volume changes unexpectedly.
+
+E07
+Event type: Large outbound data transfer.
+Likely meaning: A corporate host uploaded 950 MB to an internet destination in eight minutes. This may be an approved business transfer or possible data exfiltration.
+Severity: High.
+Required response: Identify the user, process and destination, compare with approved business activity, inspect DLP/proxy/endpoint evidence, preserve related logs and restrict the session if unauthorised.
+Escalation: Yes. Escalate to the SOC and data-protection owner.
+
+E08
+Event type: Unauthorised jump-zone access attempt to an OT engineering station.
+Likely meaning: The jump host attempted RDP access to a PLC engineering station that was not on the allowlist. The firewall denied the connection.
+Severity: Critical.
+Required response: Preserve the event, identify the account and process on the jump host, verify the work order, review related authentication and endpoint logs, and suspend the session if not approved.
+Escalation: Yes. Escalate immediately to the OT security owner and incident response.
