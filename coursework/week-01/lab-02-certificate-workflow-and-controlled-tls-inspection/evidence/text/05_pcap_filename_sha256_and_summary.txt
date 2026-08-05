@@ -1,0 +1,25 @@
+=== ACICP201 LAB 02 PCAP EVIDENCE ===
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+PCAP filename: tls_test_8443.pcap
+-rw-r--r-- 1 student student 5.2K Aug  5 12:36 /home/student/ACICP201_Evidence/week1/tls/tls_test_8443.pcap
+
+SHA-256:
+a0996dbc9fe23a965c4fb0867dd27e0d25a34b1f24214d5871f5d7cbfa51a48f  /home/student/ACICP201_Evidence/week1/tls/tls_test_8443.pcap
+
+Captured packet summary:
+reading from file /home/student/ACICP201_Evidence/week1/tls/tls_test_8443.pcap, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 262144
+Warning: interface names might be incorrect
+12:36:22.924951 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [S], seq 1057473950, win 64240, options [mss 1460,sackOK,TS val 4041676851 ecr 0,nop,wscale 7], length 0
+12:36:22.925509 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [S.], seq 3919589443, ack 1057473951, win 65160, options [mss 1460,sackOK,TS val 655451624 ecr 4041676851,nop,wscale 7], length 0
+12:36:22.925572 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [.], ack 1, win 502, options [nop,nop,TS val 4041676852 ecr 655451624], length 0
+12:36:22.941083 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [P.], seq 1:518, ack 1, win 502, options [nop,nop,TS val 4041676868 ecr 655451624], length 517
+12:36:22.941879 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [.], ack 518, win 506, options [nop,nop,TS val 655451640 ecr 4041676868], length 0
+12:36:22.950285 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [P.], seq 1:1791, ack 518, win 506, options [nop,nop,TS val 655451648 ecr 4041676868], length 1790
+12:36:22.950323 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [.], ack 1791, win 489, options [nop,nop,TS val 4041676877 ecr 655451648], length 0
+12:36:22.966131 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [P.], seq 518:598, ack 1791, win 489, options [nop,nop,TS val 4041676893 ecr 655451648], length 80
+12:36:22.966511 lab0  Out IP 192.168.56.10.35246 > 192.168.56.20.8443: Flags [P.], seq 598:720, ack 1791, win 489, options [nop,nop,TS val 4041676893 ecr 655451648], length 122
+12:36:22.967345 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [P.], seq 1791:2046, ack 720, win 505, options [nop,nop,TS val 655451666 ecr 4041676893], length 255
+12:36:22.967716 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [P.], seq 2046:2301, ack 720, win 505, options [nop,nop,TS val 655451666 ecr 4041676893], length 255
+12:36:22.967716 lab0  In  IP 192.168.56.20.8443 > 192.168.56.10.35246: Flags [P.], seq 2301:2628, ack 720, win 505, options [nop,nop,TS val 655451666 ecr 4041676893], length 327

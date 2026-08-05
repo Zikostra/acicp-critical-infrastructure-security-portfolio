@@ -1,0 +1,11 @@
+=== OPENSSL VALIDATION ===
+Verification: OK
+Verify return code: 0 (ok)
+
+=== CURL VALIDATION ===
+*  subjectAltName: host "192.168.56.20" matched cert's IP address!
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET / HTTP/1.0
+< HTTP/1.0 200 ok
+curl exit code: 0

@@ -1,0 +1,51 @@
+# Cryptographic private material
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Credentials and environment secrets
+.env
+.env.*
+!.env.example
+*password*
+*credential*
+*secret*
+*token*
+
+# SSH private and trust material
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+known_hosts
+
+# Virtual machines and installation media
+*.qcow2
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.iso
+
+# Cloud-init credential-bearing files
+user-data
+meta-data
+network-config
+
+# Private or temporary evidence
+**/raw-private/
+**/unredacted/
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Python and editor files
+__pycache__/
+*.pyc
+.vscode/
+.idea/

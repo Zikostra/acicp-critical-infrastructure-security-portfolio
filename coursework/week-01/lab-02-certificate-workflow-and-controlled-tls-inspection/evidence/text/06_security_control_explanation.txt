@@ -1,0 +1,24 @@
+ACICP201 WEEK 1 LAB 02 — SECURITY-CONTROL EXPLANATION
+
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+
+1. What is the role of the private CA in this lab?
+
+The private CA acts as the controlled trust anchor. It signs the VM-B server certificate so that VM-A can verify that the server certificate was issued by an authorised and trusted laboratory certificate authority.
+
+2. Which certificate fields prove that the certificate belongs to 192.168.56.20?
+
+The X.509 Subject Alternative Name field contains IP Address:192.168.56.20. This is the primary field used for IP-address identity validation. The certificate also contains DNS:acicp201-target and CN=acicp201-target for its assigned laboratory hostname. The issuer field and valid certificate chain prove that the certificate was signed by the ACICP201 Lab Root CA.
+
+3. What is visible in packet capture even when the TLS payload is encrypted?
+
+The capture still exposes network metadata such as source and destination IP addresses, source and destination ports, TCP flags, sequence information, packet sizes, timestamps, connection duration and TLS handshake traffic. The encrypted application content is not readable directly from the PCAP.
+
+4. Why must TLS decryption be controlled, authorised and documented?
+
+TLS decryption can expose credentials, personal information, operational data and confidential communications. It must therefore have a defined owner, approved scope, lawful purpose, secure key handling, limited retention, access controls and an audit trail.
+
+5. Which traffic should never be decrypted in production without explicit legal and organisational approval?
+
+Traffic containing personal banking information, medical data, legal or privileged communications, authentication credentials, private employee communications, regulated personal information and other explicitly excluded sensitive services should not be decrypted without formal legal and organisational approval.

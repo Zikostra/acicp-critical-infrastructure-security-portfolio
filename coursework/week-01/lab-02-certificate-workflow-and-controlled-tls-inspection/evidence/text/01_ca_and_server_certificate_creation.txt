@@ -1,0 +1,53 @@
+============================================================
+ACICP201 LAB 02 — PRIVATE CA AND SERVER CERTIFICATE CREATION
+Student: Praise Nze
+Registration Number: C11/26/ACIS/17358
+System: vm-b
+UTC execution time: Wed Aug  5 11:59:24 UTC 2026
+============================================================
+
+[PART B] Generating the 4096-bit private CA key
+PASS: Private CA key generated.
+
+[PART B] Creating the self-signed private CA certificate
+PASS: Private CA certificate created.
+
+=== PRIVATE CA CERTIFICATE DETAILS ===
+subject=C = NG, O = ICDFA, OU = ACICP201, CN = ACICP201 Lab Root CA
+issuer=C = NG, O = ICDFA, OU = ACICP201, CN = ACICP201 Lab Root CA
+serial=791F502E74B607732DE77F5D5A9317FBBDE0ECCC
+notBefore=Aug  5 11:59:26 2026 GMT
+notAfter=Aug  5 11:59:26 2027 GMT
+sha256 Fingerprint=00:42:BB:54:1E:22:32:FF:5F:74:C2:7C:86:60:BA:4A:EF:EC:A1:0D:2B:99:43:7F:DF:A9:D2:5A:23:19:D2:F7
+
+[PART C] Generating the VM-B server private key
+PASS: Server private key generated.
+
+[PART C] Creating the server certificate-signing request
+
+[PART C] Signing the server certificate with the private CA
+Certificate request self-signature ok
+subject=C = NG, O = ICDFA, OU = Network Security Engineering, CN = acicp201-target
+
+=== SERVER CERTIFICATE DETAILS ===
+subject=C = NG, O = ICDFA, OU = Network Security Engineering, CN = acicp201-target
+issuer=C = NG, O = ICDFA, OU = ACICP201, CN = ACICP201 Lab Root CA
+serial=20843C8EA7C5E4839CA14D560940BC82F63D53A9
+notBefore=Aug  5 11:59:27 2026 GMT
+notAfter=Dec  3 11:59:27 2026 GMT
+sha256 Fingerprint=BE:1B:DE:24:C6:1B:F2:28:1D:53:0C:DA:19:24:A2:E7:0D:0C:B7:7C:5A:06:34:44:56:9B:E8:15:AC:9B:A2:43
+X509v3 Subject Alternative Name:
+    DNS:acicp201-target, IP Address:192.168.56.20
+
+=== CERTIFICATE CHAIN VERIFICATION ===
+server/target.crt: OK
+
+=== GENERATED FILES ===
+-rw-rw-r--  /home/student/ACICP201_TLS/evidence/01_ca_and_server_certificate_creation.txt
+-rw-rw-r--  /home/student/ACICP201_TLS/ca/acicp201_lab_ca.srl
+-rw-------  /home/student/ACICP201_TLS/ca/acicp201_lab_ca.key
+-rw-rw-r--  /home/student/ACICP201_TLS/ca/acicp201_lab_ca.crt
+-rw-rw-r--  /home/student/ACICP201_TLS/server/target.ext
+-rw-------  /home/student/ACICP201_TLS/server/target.key
+-rw-rw-r--  /home/student/ACICP201_TLS/server/target.csr
+-rw-rw-r--  /home/student/ACICP201_TLS/server/target.crt
