@@ -1,0 +1,10 @@
+# Nmap 7.94SVN scan initiated Wed Aug  5 15:34:17 2026 as: nmap -Pn -p 22,80,8443 -oN nmap_ports.txt 192.168.56.20
+Nmap scan report for 192.168.56.20
+Host is up (0.00096s latency).
+
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+8443/tcp open  https-alt
+
+# Nmap done at Wed Aug  5 15:34:17 2026 -- 1 IP address (1 host up) scanned in 0.08 seconds

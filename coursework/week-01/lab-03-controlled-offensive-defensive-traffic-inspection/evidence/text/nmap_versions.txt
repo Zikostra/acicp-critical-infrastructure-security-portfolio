@@ -1,0 +1,27 @@
+# Nmap 7.94SVN scan initiated Wed Aug  5 15:34:17 2026 as: nmap -Pn -sV -p 22,80,8443 -oN nmap_versions.txt 192.168.56.20
+Nmap scan report for 192.168.56.20
+Host is up (0.00061s latency).
+
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH 9.6p1 Ubuntu 3ubuntu13.18 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http          SimpleHTTPServer 0.6 (Python 3.12.3)
+8443/tcp open  ssl/https-alt
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8443-TCP:V=7.94SVN%T=SSL%I=7%D=8/5%Time=6A73580B%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,131,"HTTP/1\.0\x20200\x20ok\r\nContent-type:\x20text/p
+SF:lain\r\n\r\nError\x20opening\x20''\x20mode='r'\r\n40F7680DE6730000:erro
+SF:r:80000002:system\x20library:BIO_new_file:No\x20such\x20file\x20or\x20d
+SF:irectory:\.\./crypto/bio/bss_file\.c:67:calling\x20fopen\(,\x20r\)\n40F
+SF:7680DE6730000:error:10000080:BIO\x20routines:BIO_new_file:no\x20such\x2
+SF:0file:\.\./crypto/bio/bss_file\.c:75:\n")%r(FourOhFourRequest,177,"HTTP
+SF:/1\.0\x20200\x20ok\r\nContent-type:\x20text/plain\r\n\r\nError\x20openi
+SF:ng\x20'nice%20ports%2C/Tri%6Eity\.txt%2ebak'\x20mode='r'\r\n40F7680DE67
+SF:30000:error:80000002:system\x20library:BIO_new_file:No\x20such\x20file\
+SF:x20or\x20directory:\.\./crypto/bio/bss_file\.c:67:calling\x20fopen\(nic
+SF:e%20ports%2C/Tri%6Eity\.txt%2ebak,\x20r\)\n40F7680DE6730000:error:10000
+SF:080:BIO\x20routines:BIO_new_file:no\x20such\x20file:\.\./crypto/bio/bss
+SF:_file\.c:75:\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug  5 15:37:18 2026 -- 1 IP address (1 host up) scanned in 180.89 seconds

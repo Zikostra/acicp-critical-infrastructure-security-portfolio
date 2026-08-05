@@ -1,0 +1,13 @@
+=== CONNECTION TESTS ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   731    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.12.3
+Date: Wed, 05 Aug 2026 15:37:32 GMT
+Content-type: text/html; charset=utf-8
+Content-Length: 731
+
+
+Connection to 192.168.56.20 22 port [tcp/ssh] succeeded!
+Connection to 192.168.56.20 8443 port [tcp/*] succeeded!
