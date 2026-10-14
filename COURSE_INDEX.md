@@ -21,3 +21,21 @@ See [projects/](projects/).
 ## Environment Documentation
 
 See [environment/](environment/).
+
+---
+
+## ACICP302ICS — Network Security & Attacks
+
+### OT / ICS Network Security Practical Assessment
+
+| Item | Status | Location |
+|---|---|---|
+| Practical assessment | Completed | [Open ACICP302ICS](coursework/ACICP302ICS-Network-Security-and-Attacks/) |
+| Documentation | Completed | [Documentation](coursework/ACICP302ICS-Network-Security-and-Attacks/documentation/) |
+| Evidence | Completed | [Evidence](coursework/ACICP302ICS-Network-Security-and-Attacks/evidence/) |
+| Recovery verification | Completed | [Recovery](coursework/ACICP302ICS-Network-Security-and-Attacks/recovery/) |
+| Final assessment report | Completed | [Open Markdown Report](coursework/ACICP302ICS-Network-Security-and-Attacks/FINAL_ASSESSMENT_REPORT.md) |
+
+**Instructor source commit:** `2a66f9bcf253eb3fe31c68ad52794cd535421da8`
+
+**Authorized scope:** `127.0.0.1`

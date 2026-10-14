@@ -54,3 +54,11 @@ Every completed laboratory will include:
 ## Safety Notice
 
 All cybersecurity activity documented in this repository is limited to authorised classroom and private laboratory systems.
+
+---
+
+## ACICP302ICS — Network Security & Attacks
+
+Completed OT / ICS network security practical assessment covering Modbus/TCP analysis, process-aware validation, controlled direct-versus-guarded testing, risk analysis, and recovery verification.
+
+[Open ACICP302ICS assessment](coursework/ACICP302ICS-Network-Security-and-Attacks/)
