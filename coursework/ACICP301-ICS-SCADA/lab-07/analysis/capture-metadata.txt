@@ -1,0 +1,47 @@
+ACICP301 Practical Lab 07
+Instructor PCAP Metadata
+========================
+
+Capture:
+ICDFA_Lab7ICS_Traffic.pcap
+
+Source:
+Instructor-provided Lab 07 packet capture
+
+File type:
+pcap / Ethernet
+
+File size:
+Approximately 144 MB
+
+Packet count:
+Approximately 302,000 packets
+
+Capture duration:
+226.499249 seconds
+
+Earliest packet:
+2026-09-15 10:00:00.000000
+
+Latest packet:
+2026-09-15 10:03:46.499249
+
+SHA-256:
+d0ff40d4b212bb9b464689b0a020a6157a6875db5f741decb89a2fc975b8ae6a
+
+Observed protocol counts:
+HTTP       12,000
+FTP         3,000
+Modbus    100,000
+DNP3            0 decoded by Wireshark
+EtherNet/IP 12,000
+S7comm      12,000
+
+DNP3 validation:
+28,000 TCP/20000 payload packets were identified.
+All 28,000 began with the DNP3 start sequence 05 64.
+All 28,000 contained zero-valued header CRC fields.
+Valid DNP3 header CRCs found: 0.
+Wireshark therefore did not decode these packets as DNP3.
+
+The instructor capture was not modified.
